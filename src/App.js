@@ -12,7 +12,7 @@ function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-    <div>
+    <div className="flex flex-col items-center gap-y-7">
       <Header />
       <Blogs />
       <Pagination />
