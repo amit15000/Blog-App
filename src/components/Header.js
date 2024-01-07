@@ -1,7 +1,11 @@
 import React from "react";
 
 function Header() {
-  return <div>Header</div>;
+  return (
+    <div>
+      <header>WanderWeave</header>
+    </div>
+  );
 }
 
 export default Header;
