@@ -30,7 +30,7 @@ function App() {
       <Route path="/" element={<Home />}></Route>
       <Route path="/blog/:blogId" element={<BlogPage />}></Route>
       <Route path="/tags/:tag" element={<TagPage />}></Route>
-      <Route path="/category/:category" element={<CategoryPage />}></Route>
+      <Route path="/categories/:category" element={<CategoryPage />}></Route>
     </Routes>
   );
 }
