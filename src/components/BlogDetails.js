@@ -5,7 +5,7 @@ function BlogDetails({ post }) {
   return (
     <div>
       <div className=" text-left" key={post.id}>
-        <NavLink to={`/blog/${post.div}`}>
+        <NavLink to={`/blog/${post.id}`}>
           <p className=" font-bold text-xl">{post.title}</p>
         </NavLink>
         <p className=" text-sm">

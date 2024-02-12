@@ -11,7 +11,7 @@ export default function AppContextProvider({ children }) {
   const [totalPages, setTotalPages] = useState(null);
   const navigate = useNavigate();
 
-  async function fetchBlogPosts(page = 1, tag = null, catagory) {
+  async function fetchBlogPosts(page, tag = null, catagory) {
     setLoading(true);
     // let url = `${baseUrl}?page=${page}`;
     let url = `${baseUrl}?page=${page}`;

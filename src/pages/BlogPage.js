@@ -1,11 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, useNavigation } from "react-router-dom";
 import { AppContext } from "../context/AppContext";
 import { baseUrl } from "../baseUrl";
 import Header from "../components/Header";
 import BlogDetails from "../components/BlogDetails";
 
 function BlogPage() {
+  const newBaseUrl = "https://codehelp-apis.vercel.app/api/";
   const { loading, setLoading } = useContext(AppContext);
   const [blog, setBlog] = useState(null);
   const [relatedBlogs, setRelatedBlogs] = useState([]);
@@ -14,11 +15,12 @@ function BlogPage() {
   const blogId = location.pathname.split("/").at(-1);
   async function fetchRelatedBlogs() {
     setLoading(true);
-    let url = `${baseUrl}?blogId=${blogId}`;
+    let url = `${newBaseUrl}get-blog?blogId=${blogId}`;
+    console.log(url);
     try {
       const res = await fetch(url);
       const data = await res.json();
-
+      console.log(data);
       setBlog(data.blog);
       setRelatedBlogs(data.relatedBlogs);
     } catch (error) {

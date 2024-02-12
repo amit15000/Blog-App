@@ -24,7 +24,7 @@ function App() {
       fetchBlogPosts(Number(page));
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [location.pathname, searchParams]);
+  }, [location.pathname, location.search]);
   return (
     <Routes>
       <Route path="/" element={<Home />}></Route>
