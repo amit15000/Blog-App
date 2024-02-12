@@ -9,7 +9,6 @@ export default function AppContextProvider({ children }) {
   const [posts, setPosts] = useState([]);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(null);
-  const navigate = useNavigate();
 
   async function fetchBlogPosts(page, tag = null, catagory) {
     setLoading(true);
@@ -38,7 +37,7 @@ export default function AppContextProvider({ children }) {
   }
 
   function handlePageChange(page) {
-    navigate({ search: `?page${page}` });
+    fetchBlogPosts(page);
     setPage(page);
   }
 

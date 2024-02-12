@@ -44,9 +44,9 @@ function BlogPage() {
       {loading ? (
         <p>Loading</p>
       ) : blog ? (
-        <div>
+        <div className=" w-11/12 max-w-[650px] flex flex-col justify-center items-center  gap-y-9 my-[80px] mt-10 mx-auto">
           <BlogDetails post={blog} />
-          <h2>Related Blogs</h2>
+          <h2 className=" text-xl font-bold mt-5 mb-3">Related Blogs</h2>
           {relatedBlogs.map((post) => (
             <div key={post.id}>
               <BlogDetails post={post} />
@@ -54,7 +54,7 @@ function BlogPage() {
           ))}
         </div>
       ) : (
-        <div>No Blod Found</div>
+        <div>No blog Found</div>
       )}
     </div>
   );
