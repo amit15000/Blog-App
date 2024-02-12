@@ -6,7 +6,7 @@ function Pagination() {
     useContext(AppContext);
 
   return (
-    <div className=" flex w-full border py-2 justify-center fixed bottom-0 bg-white">
+    <div className=" flex w-full border py-2 justify-center mx-auto fixed bottom-0 bg-white">
       <div className="w-11/12 max-w-[650px]">
         <div className="flex flex-row justify-between items-center">
           <div className="flex gap-x-3">
